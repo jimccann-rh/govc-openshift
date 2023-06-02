@@ -151,6 +151,6 @@ govc permissions.set -principal $PRINCIPAL -role openshift_vcenter /
 govc permissions.set -principal $PRINCIPAL -role openshift_datacenter $DC
 govc permissions.set -principal $PRINCIPAL -role openshift_cluster $CL
 govc permissions.set -principal $PRINCIPAL -role openshift_portgroup $DC/network/$PGNETWORK
-govc permissions.set -principal $PRINCIPAL -role openshift_portgroup $DC/datastore/vsanDatastore
+govc permissions.set -principal $PRINCIPAL -role openshift_datastore $DC/datastore/vsanDatastore
 govc permissions.ls |grep openshift_vcenter
 
