@@ -139,7 +139,7 @@ govc role.create openshift_folder $PRIVILEGES6
 govc role.ls | grep openshift
 
 
-PRINCIPAL="DEVQE@devqe.ibmc.devluster.openshieft.com"
+PRINCIPAL="DEVQE@devqe.ibmc.devluster.openshift.com"
 PGNETWORK="VManagement"
 
 
