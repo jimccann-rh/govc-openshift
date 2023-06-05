@@ -139,7 +139,7 @@ govc role.create openshift_folder $PRIVILEGES6
 govc role.ls | grep openshift
 
 
-PRINCIPAL="DEVQE@devqe.ibmc.devluster.openshift.com"
+PRINCIPAL="DEVQE@devqe.ibmc.devcluster.openshift.com"
 PGNETWORK="VManagement"
 
 
@@ -147,10 +147,11 @@ DC=$(govc find / -type d)
 #DC2=${DC##*:}
 CL=$(govc find / -type c)
 
-govc permissions.set -principal $PRINCIPAL -role openshift_vcenter /
-govc permissions.set -principal $PRINCIPAL -role openshift_datacenter $DC
-govc permissions.set -principal $PRINCIPAL -role openshift_cluster $CL
-govc permissions.set -principal $PRINCIPAL -role openshift_portgroup $DC/network/$PGNETWORK
-govc permissions.set -principal $PRINCIPAL -role openshift_datastore $DC/datastore/vsanDatastore
+govc permissions.set -group=true -principal $PRINCIPAL -role openshift_vcenter /
+govc permissions.set -group=true -principal $PRINCIPAL -role openshift_datacenter $DC
+govc permissions.set -group=true -principal $PRINCIPAL -role openshift_cluster $CL
+govc permissions.set -group=true -principal $PRINCIPAL -role openshift_portgroup $DC/network/$PGNETWORK
+govc permissions.set -group=true -principal $PRINCIPAL -role openshift_datastore $DC/datastore/vsanDatastore
+
 govc permissions.ls |grep openshift_vcenter
 
