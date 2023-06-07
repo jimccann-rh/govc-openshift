@@ -31,6 +31,8 @@ PRIVILEGES2="Folder.Create
     InventoryService.Tagging.EditCategory
     InventoryService.Tagging.EditTag
     InventoryService.Tagging.ObjectAttachable
+    Network.Assign
+    Network.Config
     Resource.AssignVMToPool
     System.Anonymous
     System.Read
@@ -85,6 +87,8 @@ PRIVILEGES4="Cns.Searchable
     InventoryService.Tagging.DeleteTag
     InventoryService.Tagging.EditCategory
     InventoryService.Tagging.EditTag
+    Network.Assign
+    Network.Config
     Sessions.ValidateSession
     StorageProfile.Update
     StorageProfile.View
