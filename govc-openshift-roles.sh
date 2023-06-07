@@ -90,8 +90,21 @@ PRIVILEGES4="Cns.Searchable
     StorageProfile.View
     System.Anonymous
     System.Read
-    System.View"
-
+    System.View
+    VirtualMachine.Interact.Backup                                                                                                                                                                                                            
+    VirtualMachine.Interact.SetCDMedia                                                                                                                                                                                                        
+    VirtualMachine.Interact.SetFloppyMedia                                                                                                                                                                                                    
+    VirtualMachine.Interact.ConsoleInteract                                                                                                                                                                                                   
+    VirtualMachine.Interact.CreateScreenshot                                                                                                                                                                                                  
+    VirtualMachine.Interact.DeviceConnection                                                                                                                                                                                                  
+    VirtualMachine.Interact.GuestControl                                                                                                                                                                                                      
+    VirtualMachine.Interact.ToolsInstall                                                                                                                                                                                                      
+    VirtualMachine.Interact.PowerOff                                                                                                                                                                                                          
+    VirtualMachine.Interact.PowerOn                                                                                                                                                                                                           
+    VirtualMachine.Interact.Reset                                                                                                                                                                                                             
+    VirtualMachine.Interact.Record                                                                                                                                                                                                            
+    VirtualMachine.Interact.Replay"                          
+    
 govc role.create openshift_vcenter $PRIVILEGES4
 
 PRIVILEGES5="Network.Assign
