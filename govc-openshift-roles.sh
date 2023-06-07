@@ -63,7 +63,16 @@ PRIVILEGES2="Folder.Create
     VirtualMachine.Inventory.Delete
     VirtualMachine.Provisioning.Clone
     VirtualMachine.Provisioning.DeployTemplate
-    VirtualMachine.Provisioning.MarkAsTemplate"
+    VirtualMachine.Provisioning.MarkAsTemplate
+    VirtualMachine.Interact.Backup
+    VirtualMachine.Interact.SetCDMedia
+    VirtualMachine.Interact.SetFloppyMedia
+    VirtualMachine.Interact.ConsoleInteract
+    VirtualMachine.Interact.CreateScreenshot
+    VirtualMachine.Interact.DeviceConnection
+    VirtualMachine.Interact.ToolsInstall
+    VirtualMachine.Interact.Record
+    VirtualMachine.Interact.Replay"
 
 govc role.create openshift_datacenter $PRIVILEGES2
 
