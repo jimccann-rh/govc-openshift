@@ -1,6 +1,6 @@
-!/bin/bash
+#!/bin/bash
 
-source ../sourcevc 
+source ../.sourcevc 
 govc session.login 
 govc about
 
@@ -104,20 +104,21 @@ PRIVILEGES4="Cns.Searchable
     System.Anonymous
     System.Read
     System.View
-    VirtualMachine.Interact.Backup                                                                                                                                                                                                            
-    VirtualMachine.Interact.SetCDMedia                                                                                                                                                                                                        
-    VirtualMachine.Interact.SetFloppyMedia                                                                                                                                                                                                    
-    VirtualMachine.Interact.ConsoleInteract                                                                                                                                                                                                   
-    VirtualMachine.Interact.CreateScreenshot                                                                                                                                                                                                  
-    VirtualMachine.Interact.DeviceConnection                                                                                                                                                                                                  
-    VirtualMachine.Interact.GuestControl                                                                                                                                                                                                      
-    VirtualMachine.Interact.ToolsInstall                                                                                                                                                                                                      
-    VirtualMachine.Interact.PowerOff                                                                                                                                                                                                          
-    VirtualMachine.Interact.PowerOn                                                                                                                                                                                                           
-    VirtualMachine.Interact.Reset                                                                                                                                                                                                             
-    VirtualMachine.Interact.Record                                                                                                                                                                                                            
-    VirtualMachine.Interact.Replay"                          
-    
+    VirtualMachine.Interact.Backup
+    VirtualMachine.Interact.SetCDMedia
+    VirtualMachine.Interact.SetFloppyMedia
+    VirtualMachine.Interact.ConsoleInteract
+    VirtualMachine.Interact.CreateScreenshot
+    VirtualMachine.Interact.DeviceConnection
+    VirtualMachine.Interact.GuestControl
+    VirtualMachine.Interact.ToolsInstall
+    VirtualMachine.Interact.PowerOff
+    VirtualMachine.Interact.PowerOn
+    VirtualMachine.Interact.Reset
+    VirtualMachine.Interact.Record
+    VirtualMachine.Interact.Replay"
+
+
 govc role.create openshift_vcenter $PRIVILEGES4
 
 PRIVILEGES5="Network.Assign
@@ -165,6 +166,7 @@ govc role.create openshift_folder $PRIVILEGES6
 govc role.ls | grep openshift
 
 
+#PRINCIPAL="DEVQE"
 PRINCIPAL="DEVQE@devqe.ibmc.devcluster.openshift.com"
 PGNETWORK="VManagement"
 
@@ -178,6 +180,5 @@ govc permissions.set -group=true -principal $PRINCIPAL -role openshift_datacente
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_cluster $CL
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_portgroup $DC/network/$PGNETWORK
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_datastore $DC/datastore/vsanDatastore
-
 govc permissions.ls |grep openshift_vcenter
 
