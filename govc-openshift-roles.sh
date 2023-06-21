@@ -21,7 +21,8 @@ PRIVILEGES1="Host.Config.Storage
 govc role.update openshift_cluster $PRIVILEGES1
 
 
-PRIVILEGES2="Folder.Create
+PRIVILEGES2="Datastore.AllocateSpace
+    Folder.Create
     Folder.Delete
     InventoryService.Tagging.AttachTag
     InventoryService.Tagging.CreateCategory
@@ -53,6 +54,7 @@ PRIVILEGES2="Folder.Create
     VirtualMachine.Config.ResetGuestInfo
     VirtualMachine.Config.Resource
     VirtualMachine.Config.Settings
+    VirtualMachine.Config.SwapPlacement
     VirtualMachine.Config.UpgradeVirtualHardware
     VirtualMachine.Interact.GuestControl
     VirtualMachine.Interact.PowerOff
