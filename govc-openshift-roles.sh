@@ -74,7 +74,8 @@ PRIVILEGES2="Datastore.AllocateSpace
     VirtualMachine.Interact.DeviceConnection
     VirtualMachine.Interact.ToolsInstall
     VirtualMachine.Interact.Record
-    VirtualMachine.Interact.Replay"
+    VirtualMachine.Interact.Replay
+    VirtualMachine.Provisioning.Customize"
 
 govc role.create openshift_datacenter $PRIVILEGES2
 
