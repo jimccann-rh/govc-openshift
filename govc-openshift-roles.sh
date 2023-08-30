@@ -11,6 +11,8 @@ PRIVILEGES1="Host.Config.Storage
    Resource.AssignVMToPool
    Resource.CreatePool
    Resource.DeletePool
+   Resource.ColdMigrate
+   Resource.HotMigrate
    System.Anonymous
    System.Read
    System.View
