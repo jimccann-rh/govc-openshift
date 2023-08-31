@@ -17,6 +17,8 @@ PRIVILEGES1="Host.Config.Storage
    System.Read
    System.View
    VApp.AssignResourcePool
+   vApp.Clone
+   vApp.vApp application configuration
    VApp.Import
    VirtualMachine.Config.AddNewDisk"
 
