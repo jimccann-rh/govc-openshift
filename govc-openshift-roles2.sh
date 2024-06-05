@@ -4,7 +4,6 @@
 govc session.login 
 govc about
 
-
 #openshift_cluster.role
 #openshift_datacenter.role
 #openshift_datastore.role
@@ -12,9 +11,6 @@ govc about
 #openshift_portgroup.role
 #openshift_resource_pool.role
 #openshift_vcenter.role
-
-
-
 
 govc role.create openshift_cluster
 
