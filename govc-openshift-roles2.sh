@@ -71,5 +71,10 @@ govc permissions.set -group=true -principal $PRINCIPAL -role openshift_datacente
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_cluster $CL
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_portgroup $DC/network/"$PGNETWORK"
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_datastore $DC/datastore/$DATASTORE
-govc permissions.ls |grep openshift_vcenter
+echo "what is set:"
+govc permissions.ls |grep openshift_
+govc permissions.ls $DC |grep openshift_
+govc permissions.ls $CL |grep openshift_
+govc permissions.ls $DC/network/"$PGNETWORK" |grep openshift_
+govc permissions.ls $DC/datastore/$DATASTORE |grep openshift_
 
