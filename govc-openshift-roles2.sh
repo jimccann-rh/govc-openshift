@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read -p "Group " newGroup
+
 #source ../.sourcevc 
 govc session.login 
 govc about
@@ -56,7 +58,8 @@ govc role.create openshift_resource_pool $PRIVILEGES7
 govc role.ls | grep openshift
 
 
-PRINCIPAL="CI@ci.ibmc.devcluster.openshift.com"
+PRINCIPAL="${newGroup}@ci.ibmc.devcluster.openshift.com"
+echo $PRINCIPAL
 PGNETWORK="VM Network"
 #PGNETWORK="VManagement"
 DATASTORE="fs-cicluster-nfs"
