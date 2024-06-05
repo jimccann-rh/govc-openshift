@@ -1,0 +1,7 @@
+System.Anonymous
+System.View
+System.Read
+Datastore.Browse
+Datastore.FileManagement
+Datastore.AllocateSpace
+InventoryService.Tagging.ObjectAttachable

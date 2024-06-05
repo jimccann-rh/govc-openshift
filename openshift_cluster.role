@@ -1,0 +1,14 @@
+System.Anonymous
+System.View
+System.Read
+Host.Config.Storage
+VirtualMachine.Config.AddNewDisk
+VirtualMachine.Provisioning.Clone
+VirtualMachine.Provisioning.CloneTemplate
+Resource.AssignVMToPool
+Resource.CreatePool
+Resource.DeletePool
+VApp.Import
+VApp.AssignResourcePool
+InventoryService.Tagging.AttachTag
+InventoryService.Tagging.ObjectAttachable
