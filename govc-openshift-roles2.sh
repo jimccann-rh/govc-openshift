@@ -60,7 +60,6 @@ govc role.create openshift_resource_pool $PRIVILEGES7
 govc role.ls | grep openshift
 
 
-##PRINCIPAL="DEVQE"
 PRINCIPAL="CI@ci.ibmc.devcluster.openshift.com"
 PGNETWORK="VM Network"
 #PGNETWORK="VManagement"
@@ -77,4 +76,4 @@ govc permissions.set -group=true -principal $PRINCIPAL -role openshift_cluster $
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_portgroup $DC/network/"$PGNETWORK"
 govc permissions.set -group=true -principal $PRINCIPAL -role openshift_datastore $DC/datastore/$DATASTORE
 govc permissions.ls |grep openshift_vcenter
-#
+
