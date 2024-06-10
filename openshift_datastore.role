@@ -5,3 +5,4 @@ Datastore.Browse
 Datastore.FileManagement
 Datastore.AllocateSpace
 InventoryService.Tagging.ObjectAttachable
+Cns.Searchable
